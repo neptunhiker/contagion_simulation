@@ -1,0 +1,22 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block content %}
+
+<h1 class="">Simulation</h1>
+
+<div id="canvas-container"></div> <!-- This container will hold the canvas -->
+<div class="row justify-content-between">
+  <div class="col-3">
+    <canvas id="infectedChart"></canvas>
+  </div>
+  <div class="col-3">
+    <canvas id="newDataChart"></canvas>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="module" src="{% static 'simulation/js/viruses.js' %}"></script>
+<script type="module" src="{% static 'simulation/js/rng.js' %}"></script>
+<script type="module" src="{% static 'simulation/js/healthcare.js' %}"></script>
+<script type="module" src="{% static 'simulation/js/sketch.js' %}"></script>
+{% endblock %}
